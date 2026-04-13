@@ -1,0 +1,17 @@
+x = input("Digite algo: ")
+tipo = type(x)
+
+print("{} é do tipo: {}".format(x, tipo))
+
+print("Está em maiúsculo:", x.isupper())
+print("Está em minúsculo:", x.islower())
+print("É alfanumérico:", x.isalnum())
+print("É alfabético:", x.isalpha())
+print("É ASCII:", x.isascii())
+print("É decimal:", x.isdecimal())
+print("É dígito:", x.isdigit())
+print("É identificador:", x.isidentifier())
+print("Está capitalizado:", x.istitle())
+print("É espaço:", x.isspace())
+print("É imprimível:", x.isprintable())
+print("É numérico:", x.isnumeric())
