@@ -1,18 +1,17 @@
-casa = float(input("Valor da Casa: "))
-salario = float(input("Salário do Comprador: "))
+casa = float(input("Valor da Casa: R$ "))
+salario = float(input("Salário do Comprador: R$ "))
 anos = int(input("Quantos Anos de Financiamento? "))
 
-messes = anos * 12
-parcela = casa / messes
-prestacao = salario * 30 / 100
+prestacao = casa / (anos * 12)
+minimo = salario * 30 / 100
 
 print(
-    "Para pagar uma casa de R$ {:.2f} em {} anos a prestação será de R$ {:.2f}".format(
-        casa, anos, parcela
+    "Para pagar uma casa de R$ {:.2f} em {} anos a prestação será de R$ {:.2f}.".format(
+        casa, anos, prestacao
     )
 )
 
-if parcela > prestacao:
-    print("Empréstimo NEGADO!")
-elif parcela < prestacao:
+if prestacao <= minimo:
     print("Empréstimo pode ser CONCEDIDO!")
+else:
+    print("Empréstimo NEGADO!")
